@@ -5,22 +5,6 @@
 
 The dataset used in this project is focused on predicting the EUR/USD exchange rate. It consists of historical euro-usd price from (jan 2001 to frb 2025) and economic indicators of Europe and USA from (2000 to 2023). The dataset includes various features that are significant for making accurate predictions in foreign exchange markets.
 
-### Data Description
-
-1. **Date**: The specific date for each entry in the dataset. This is important for time-series analysis.
-   
-2. **Open Price**: The price at which the EUR/USD pair started trading at the beginning of the trading day.
-   
-3. **High Price**: The highest price reached by the EUR/USD pair during the trading day.
-   
-4. **Low Price**: The lowest price reached by the EUR/USD pair during the trading day.
-   
-5. **Close Price**: The price at which the EUR/USD pair ended trading at the close of the trading day.
-   
-6. **Volume**: The total volume of trading for the EUR/USD pair within the trading day. This can indicate the level of interest or activity in the market.
-   
-7. **Other Indicators**: This may include technical indicators such as moving averages, RSI, MACD, etc., which are often used by traders to predict future price movements.
-
 ### Data Source
 
 euro_usd_historical_data link : https://in.investing.com/currencies/eur-usd-historical-data
