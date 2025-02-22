@@ -32,23 +32,6 @@ Understanding the dataset is crucial for building effective predictive models. B
 
 The EDA process is a critical step in any data project. It allows us to gain insights into the data distribution, identify patterns, and discover relationships between variables. In this project, the EDA process was essential for understanding the historical EUR/USD data and identifying the most informative features for predicting future prices.
 
-### Summary Statistics
-
-The summary statistics of the dataset were calculated to gain insights into the distribution of the data. The results of the summary statistics are presented below:
-
-	   Price	   Open	    High	    Low	        Change %
-count 6558	    6558        6558	    6558 	     6558.000000
-mean 1.188373	1.188526	1.193745	1.183257	 0.000023
-std	 0.156476	0.156478	0.157106	0.155757	 0.005834
-min  0.827000	0.827000	0.832600	0.822700	-0.027600
-25%	 1.087725	1.088025	1.092400	1.084025	-0.003300
-50%	 1.179950	1.180100	1.184100	1.176100	 0.000000
-75%	 1.306375	1.306475	1.312200	1.301000	 0.003200
-max	 1.598700	1.599600	1.603900	1.586500	 0.037900
-
-From the summary statistics, we can see that the mean and median of the Price feature are close to each other, indicating that the data is relatively symmetric. The standard deviation of the Price feature is 0.156476, which indicates a relatively high level of volatility in the EUR/USD exchange rate.
-
-
 ### Feature Engineering
 
 The feature engineering process was used to create new features that may enhance the predictive power of the models. The following features were created:
