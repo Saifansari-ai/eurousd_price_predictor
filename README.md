@@ -3,7 +3,7 @@
 # Data of the project
 ## Dataset Overview
 
-The dataset used in this project is focused on predicting the EUR/USD exchange rate. It consists of historical euro-usd price from (jan 2001 to frb 2025) and economic indicators of Europe and USA from (2000 to 2023). The dataset includes various features that are significant for making accurate predictions in foreign exchange markets.
+The dataset used in this project is focused on predicting the EUR/USD exchange rate. It consists of historical euro-usd price from (jan 2000 to frb 2025) and economic indicators of Europe and USA from (2000 to 2023). The dataset includes various features that are significant for making accurate predictions in foreign exchange markets.
 
 ### Data Source
 
@@ -27,4 +27,54 @@ Before using the data for model training, several preprocessing steps are perfor
 ### Conclusion
 
 Understanding the dataset is crucial for building effective predictive models. By leveraging historical data and carefully preprocessing it, the project aims to provide accurate predictions of the EUR/USD exchange rate, which can be beneficial for traders, investors, and financial analysts.
+
+## Exploratory Data Analysis (EDA)
+
+The EDA process is a critical step in any data project. It allows us to gain insights into the data distribution, identify patterns, and discover relationships between variables. In this project, the EDA process was essential for understanding the historical EUR/USD data and identifying the most informative features for predicting future prices.
+
+### Summary Statistics
+
+The summary statistics of the dataset were calculated to gain insights into the distribution of the data. The results of the summary statistics are presented below:
+
+	   Price	   Open	    High	    Low	        Change %
+count 6558	    6558        6558	    6558 	     6558.000000
+mean 1.188373	1.188526	1.193745	1.183257	 0.000023
+std	 0.156476	0.156478	0.157106	0.155757	 0.005834
+min  0.827000	0.827000	0.832600	0.822700	-0.027600
+25%	 1.087725	1.088025	1.092400	1.084025	-0.003300
+50%	 1.179950	1.180100	1.184100	1.176100	 0.000000
+75%	 1.306375	1.306475	1.312200	1.301000	 0.003200
+max	 1.598700	1.599600	1.603900	1.586500	 0.037900
+
+From the summary statistics, we can see that the mean and median of the Price feature are close to each other, indicating that the data is relatively symmetric. The standard deviation of the Price feature is 0.156476, which indicates a relatively high level of volatility in the EUR/USD exchange rate.
+
+
+### Feature Engineering
+
+The feature engineering process was used to create new features that may enhance the predictive power of the models. The following features were created:
+
+* **Moving Averages**: The moving averages of the Price feature were calculated to capture the trend and momentum of the data. The moving averages were calculated using different time windows, such as 10, 20, 30, 50, and 100 days.
+* **Relative Strength Index (RSI)**: The RSI was calculated to capture the strength of the trend. The RSI was calculated using a 14-day time window.
+* **Bollinger Bands**: The Bollinger Bands were calculated to capture the volatility of the data. The Bollinger Bands were calculated using a 20-day time window and a standard deviation of 2.
+* **Momentum**: The momentum of the data was calculated by taking the difference between the current price and the previous price.
+* **Volume Features**: The volume features were created by taking the moving averages of the Vol. feature. The volume features were calculated using different time windows, such as 10, 20, 30, 50, and 100 days.
+
+The feature engineering process resulted in a total of 15 features, which were then used to train and test the machine learning models.
+
+### Normalization
+
+The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler, which scales the data to a range of [0,1]. The Min-Max Scaler was used to normalize the following features:
+
+* Price
+* Open
+* High
+* Low
+* Vol.
+* Moving Averages
+* RSI
+* Bollinger Bands
+* Momentum
+* Volume Features
+
+The normalization process resulted in a dataset where all features have the same scale, which is essential for training machine learning models.
 
