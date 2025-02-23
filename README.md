@@ -34,15 +34,36 @@ The EDA process is a critical step in any data project. It allows us to gain ins
 
 ### Feature Engineering
 
-The feature engineering process was used to create new features that may enhance the predictive power of the models. The following features were created:
+The feature engineering process involves creating new features that can potentially increase the model's predictive accuracy. Below is a detailed documentation of the features engineered for this project:
 
-* **Moving Averages**: The moving averages of the Price feature were calculated to capture the trend and momentum of the data. The moving averages were calculated using different time windows, such as 10, 20, 30, 50, and 100 days.
-* **Relative Strength Index (RSI)**: The RSI was calculated to capture the strength of the trend. The RSI was calculated using a 14-day time window.
-* **Bollinger Bands**: The Bollinger Bands were calculated to capture the volatility of the data. The Bollinger Bands were calculated using a 20-day time window and a standard deviation of 2.
-* **Momentum**: The momentum of the data was calculated by taking the difference between the current price and the previous price.
-* **Volume Features**: The volume features were created by taking the moving averages of the Vol. feature. The volume features were calculated using different time windows, such as 10, 20, 30, 50, and 100 days.
+1. **Simple Moving Averages (SMA):**
+   - **7-Day SMA**: The average price over the last 7 days.
+   - **30-Day SMA**: The average price over the last 30 days.
+   - **100-Day SMA**: The average price over the last 100 days.
+   - **200-Day SMA**: The average price over the last 200 days.
+   These averages help smooth out short-term fluctuations and highlight longer-term trends in the data.
 
-The feature engineering process resulted in a total of 15 features, which were then used to train and test the machine learning models.
+2. **Temporal Features:**
+   - **Day of the Week**: day name indicating the day of the week.
+   - **Week of the Year**: An integer representing the week number within the year.
+   - **Month**: An integer (1-12) representing the month of the year.
+   - **Year**: The year extracted from the date.
+
+3. **Technical Indicators:**
+   - **Relative Strength Index (RSI)**: A momentum oscillator that measures the speed and change of price movements, typically used to identify overbought or oversold conditions.
+   - **Moving Average Convergence Divergence (MACD)**: A trend-following momentum indicator that shows the relationship between two moving averages of a security’s price.
+
+4. **Lag Features:**
+   - **1-Day Lag**: The price from the previous day.
+   - **3-Day Lag**: The price from three days prior.
+   - **7-Day Lag**: The price from seven days prior.
+   Lag features capture the price momentum and help in understanding how past prices influence future prices.
+
+5. **Target Variable:**
+   - **Next Day Price**: The price of the asset on the following day, which serves as the target variable for the prediction models.
+
+These engineered features, combined with thorough preprocessing, form the basis for training machine learning models to predict future EUR/USD prices effectively.
+
 
 ### Normalization
 
