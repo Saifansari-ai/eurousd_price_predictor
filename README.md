@@ -57,10 +57,17 @@ The feature engineering process involves creating new features that can potentia
    - **1-Day Lag**: The price from the previous day.
    - **3-Day Lag**: The price from three days prior.
    - **7-Day Lag**: The price from seven days prior.
+   - **14-Day Lag**: The price from fourteen days prior.
+   - **30-Day Lag**: The price from thirty days prior.
    Lag features capture the price momentum and help in understanding how past prices influence future prices.
 
 5. **Target Variable:**
    - **Next Day Price**: The price of the asset on the following day, which serves as the target variable for the prediction models.
+
+6.  **Volatility Metrics:**
+   - **Bollinger Bands**: A volatility indicator that consists of a middle band (SMA) and two outer bands (standard deviations away from the SMA). It helps identify overbought or oversold conditions.
+   - **Average True Range (ATR)**: A measure of volatility that calculates the average range between the high and low prices over a specified period, providing insights into market volatility.
+
 
 These engineered features, combined with thorough preprocessing, form the basis for training machine learning models to predict future EUR/USD prices effectively.
 
