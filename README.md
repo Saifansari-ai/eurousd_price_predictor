@@ -72,6 +72,20 @@ The feature engineering process involves creating new features that can potentia
 These engineered features, combined with thorough preprocessing, form the basis for training machine learning models to predict future EUR/USD prices effectively.
 
 
+### Visualization on Feature Engineered columns
+
+
+
+1. **Visualization of SMA_7 vs SMA_30 and SMA_100 vs SMA_200:**
+   - Create line plots of the SMA_7 vs SMA_30 and SMA_100 vs SMA_200 to visualize the relationship between the two pairs of short-term and long-term simple moving averages.
+   - Analyze the plots to identify any trends, patterns, or insights that can be used to improve the prediction models.
+
+2. **Visualization of Volatility on Weekdays, Week of Year, and Months:**
+   - Create barplots of the  weekdays to get the volatility throughout the week 
+   - create line plot on the week and months of the year to get long term volatility.
+   - Analyze the plots to identify any trends, patterns, or insights that can be used to improve the prediction models.
+
+
 ### Normalization
 
 The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler, which scales the data to a range of [0,1]. The Min-Max Scaler was used to normalize the following features:
