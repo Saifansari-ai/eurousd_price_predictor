@@ -86,6 +86,23 @@ These engineered features, combined with thorough preprocessing, form the basis 
    - Analyze the plots to identify any trends, patterns, or insights that can be used to improve the prediction models.
 
 
+3. **Visualization of RSI_14 vs Price**
+
+- **Objective**: To identify overbought and oversold conditions in the EUR/USD market.
+- **Method**: Plot the 14-day RSI along with the price data.
+- **Analysis**:
+  - The RSI is a momentum oscillator that ranges from 0 to 100, with values above 70 indicating overbought conditions and values below 30 indicating oversold conditions.
+  - By visualizing the RSI_14 against the price, we can detect potential reversal points and assess market momentum.
+
+4. **Visualization of MACD vs Signal Line**
+
+- **Objective**: To capture trend changes and generate buy or sell signals.
+- **Method**: Plot the MACD line and the Signal line on the same graph.
+- **Analysis**:
+  - The MACD is calculated by subtracting the 26-period exponential moving average (EMA) from the 12-period EMA, while the Signal line is the 9-period EMA of the MACD.
+  - Crossing of the MACD above the Signal line is considered a bullish signal, while crossing below is considered bearish.
+  - By visualizing these indicators, we can identify trends and potential trading opportunities.
+
 ### Normalization
 
 The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler, which scales the data to a range of [0,1]. The Min-Max Scaler was used to normalize the following features:
