@@ -103,6 +103,26 @@ These engineered features, combined with thorough preprocessing, form the basis 
   - Crossing of the MACD above the Signal line is considered a bullish signal, while crossing below is considered bearish.
   - By visualizing these indicators, we can identify trends and potential trading opportunities.
 
+5. **Visualization of the Lag features**
+
+   - **Objective**: To visualize the lag features to identify how past prices influence future prices.
+   - **Method**: Create line plots of the lag features (Lag1, Lag3, Lag7, Lag14, and Lag30) against the price data.
+   - **Analysis**:
+     - Analyze the plots to identify any trends, patterns, or insights that can be used to improve the prediction models.
+     - The plots will show how past prices influence future prices, which can be used to select the most informative lag features for the prediction models.
+
+6. **Visualization of Bollinger Bands**
+
+- **Objective**: The objective of visualizing Bollinger Bands is to identify potential buy and sell signals based on price volatility and trend analysis. Bollinger Bands consist of a middle band (simple moving average) and two outer bands that represent standard deviations away from the middle band. This visualization helps traders understand market volatility and potential price breakouts.
+
+**Analysis**
+
+   - **Price Breakouts**: Observe when the price crosses above the upper band or below the lower band, indicating potential buy or sell signals.
+   - **Volatility**: Wider bands suggest higher volatility, while narrower bands indicate lower volatility.
+   - **Trend Reversals**: Monitor for price reversals when the price approaches or moves outside the bands.
+
+
+
 ### Normalization
 
 The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler, which scales the data to a range of [0,1]. The Min-Max Scaler was used to normalize the following features:
