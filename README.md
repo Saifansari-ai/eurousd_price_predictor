@@ -125,18 +125,29 @@ These engineered features, combined with thorough preprocessing, form the basis 
 
 ### Normalization
 
-The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler, which scales the data to a range of [0,1]. The Min-Max Scaler was used to normalize the following features:
+The normalization process was used to scale the data to ensure all features contribute equally to the distance calculations in machine learning algorithms. The normalization process was performed using the Min-Max Scaler and Stander scaler.
+
+**Min-Max Scaler:**
 
 * Price
 * Open
 * High
 * Low
-* Vol.
-* Moving Averages
-* RSI
-* Bollinger Bands
-* Momentum
-* Volume Features
+
+**Stander Scaler:**
+* SMA_7
+* SMA_30
+* SMA_100
+* SMA_200
+* RSI_14
+* MACD
+* Signal_Line
+* Lag_14
+* Lag_30
+* SMA_20
+* Upper_Band
+* Lower_Band
+* ATR_14
 
 The normalization process resulted in a dataset where all features have the same scale, which is essential for training machine learning models.
 
