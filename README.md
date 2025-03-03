@@ -151,3 +151,33 @@ The normalization process was used to scale the data to ensure all features cont
 
 The normalization process resulted in a dataset where all features have the same scale, which is essential for training machine learning models.
 
+# Model training
+## Workflow
+
+1. Model Selection & Baseline Model
+2. Experimenting with Advanced Models
+3. Hyperparameter Tuning
+4. Model Evaluation & Validation
+5. Model Deployment
+6. Documentation & Final Report
+7. Future Improvements
+
+## Linear regression
+After training the data on linear regression 
+
+### 📊 Model Performance Analysis
+**✅ MAE (Mean Absolute Error) = 0.0039**
+
+- The average absolute error is ~0.0039, meaning model’s predictions are very close to actual values.
+
+**✅ MSE (Mean Squared Error) = 2.62e-05**
+
+- A very small error, which is great.
+
+**✅ RMSE (Root Mean Squared Error) = 0.0051**
+
+- Since RMSE is in the same unit as the target variable (EUR/USD price), an error of 0.0051 is quite small.
+
+**✅ R² Score = 0.9925**
+
+- model explains 99.25% of the variance in EUR/USD prices, which is extremely good!
