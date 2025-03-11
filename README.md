@@ -181,3 +181,35 @@ After training the data on linear regression
 **✅ R² Score = 0.9925**
 
 - model explains 99.25% of the variance in EUR/USD prices, which is extremely good!
+
+## SARIMA model
+
+- **The model's predictions (green dashed line) fail to capture the actual price movement of EUR/USD in the test set (red line). While the model shows a general trend, it lacks the ability to follow the sharp fluctuations and volatility of the actual prices. This suggests that the model is overly simplistic or not incorporating important factors that drive currency price movements**
+
+### Limitations of the SARIMA Model in Predicting EUR/USD Prices
+
+The SARIMA (Seasonal Autoregressive Integrated Moving Average) model, while effective for capturing linear patterns and seasonality, has several limitations when applied to financial time series like EUR/USD:
+
+**1. Inability to Capture High Volatility:**
+
+- SARIMA assumes that the time series follows a linear pattern, which makes it ineffective for capturing sudden spikes, crashes, or high volatility present in financial markets.
+
+**2. Poor Performance on Non-Stationary Data:**
+
+- Although differencing helps in making data stationary, SARIMA struggles with non-stationary financial data that exhibit structural breaks, economic shifts, or external shocks.
+
+**3. Limited Handling of External Factors:**
+
+- SARIMA only considers past values of the time series and does not incorporate external macroeconomic indicators (e.g., interest rates, inflation, GDP), which are crucial for exchange rate movements.
+
+**4. Overfitting or Underfitting Issues:**
+
+- Tuning SARIMA parameters (p, d, q, P, D, Q, s) can be challenging, and improper selection may lead to underfitting (failing to capture patterns) or overfitting (poor generalization to new data).
+
+**5. Fixed-Length Memory:**
+
+- The autoregressive component (AR) limits how far back the model considers past data, which may not be sufficient for capturing long-term dependencies in financial time series.
+
+**6. Limited Adaptability to Changing Market Conditions:**
+
+- SARIMA models assume that historical patterns repeat, which is not always the case in financial markets due to regime shifts, policy changes, or unexpected global events.
