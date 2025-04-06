@@ -213,3 +213,71 @@ The SARIMA (Seasonal Autoregressive Integrated Moving Average) model, while effe
 **6. Limited Adaptability to Changing Market Conditions:**
 
 - SARIMA models assume that historical patterns repeat, which is not always the case in financial markets due to regime shifts, policy changes, or unexpected global events.
+
+# EUR/USD Price Prediction using Random Forest Regression
+
+- This project explores the use of a Random Forest Regressor to predict daily EUR/USD prices using historical and economic data. The goal was to assess how well tree-based models can capture currency price trends across different market conditions.
+
+### ✅ Model Highlights
+
+**Good Trend Prediction:**
+
+- Accurately tracks uptrends and downtrends across multiple years.
+
+- Close predictions to actual values in 2020, 2021, 2023, and 2024.
+
+- Shows no major overfitting and generalizes well across time.
+
+**Strong Performance in Stable Years:**
+
+- In years like 2020 (steady uptrend) and 2021 (clear downtrend), the model follows price movements with high precision.
+
+- In 2023, despite volatility, the model maintains reasonable accuracy thanks to structured fluctuations.
+
+### ❌ Limitations
+
+**Struggles in High Volatility Periods:**
+
+- In 2022, sharp spikes and reversals caused large prediction errors.
+
+- As a non-sequential model, Random Forest fails to capture temporal dependencies, leading to lag or overshooting in highly volatile periods.
+
+### 🛠️ Techniques Used
+
+**Random Forest Regression**
+
+**RandomizedSearchCV for hyperparameter tuning**
+
+**Train-test split by year to evaluate generalization over time**
+
+**Visual analysis of predicted vs actual trends**
+
+# XGBoost
+
+### 📊 Model Performance
+
+**✅ Default XGBoost**
+
+- RMSE: 0.00657
+
+- R² Score: 0.98773
+
+- MAE: 0.00508
+
+- Best overall performance among tested models
+
+- Accurately tracks trends in stable and semi-volatile years (2020, 2021, 2023, 2024)
+
+**❌ Tuned XGBoost**
+- Performance slightly declined after hyperparameter tuning:
+
+- RMSE: ↑ 0.00686
+
+- MAE: ↑ 0.00534
+
+- R²: ↓ 0.98662
+
+**🔍 Default parameters gave better results, suggesting that XGBoost performs well out of the box for this dataset.**
+
+
+
