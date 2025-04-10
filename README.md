@@ -279,5 +279,20 @@ The SARIMA (Seasonal Autoregressive Integrated Moving Average) model, while effe
 
 **🔍 Default parameters gave better results, suggesting that XGBoost performs well out of the box for this dataset.**
 
+# LightGBM 
+
+## 📊 Model Performance
+
+- RMSE: 0.00659
+
+- R² Score: 0.98763
+
+- MAE: 0.00506
+
+- LightGBM is now the top performer across all three metrics!
+
+- It has the lowest RMSE and MAE, and the highest R² Score, indicating better generalization and more accurate predictions than both XGBoost and Random Forest.
+
+- Even though Random Forest had a slightly lower MAE before, LightGBM beats it in all other aspects and is more consistent.
 
 
